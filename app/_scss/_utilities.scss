@@ -1,8 +1,34 @@
+.sec-header {
+	margin-top: 3em;
+	position: relative;
+}
+
+.verticle-line {
+	position: absolute;
+	width: 0;
+	height: 100%;
+	left: 50%;
+	top: 50px;
+	border: 2px solid #e1e0df;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.header {
+	display: inline-block;
+	padding: .5em 2em;
+	margin: 0;
+	background-color: rgba($dark-grey, .1);
+}
+
 .wrapper {
 	height: 100%;
 }
 
 .sec {
+	position: relative;
 	padding: 5em 0;
 }
 
@@ -40,6 +66,10 @@
 	box-shadow: 0 1px 2px rgba($dark-grey, .5);
 }
 
+.shadow-lg {
+	box-shadow: 0 4px 20px rgba($dark-grey, .3);
+}
+
 .text-shadow-s {
 	text-shadow: 0 1px 0 $dark-grey;
 }
@@ -53,6 +83,22 @@
 
 .bd-sm {
 	border: 3px solid rgba($white, .1);
+}
+
+.bd-sm-pink {
+	border: 4px solid rgba($deep-pink, .7);
+}
+
+.bd-md-dash {
+	border: 4px dashed rgba(#000, .7);
+}
+
+.bd-sm-dark {
+	border: 1px solid rgba($dark-grey, .4);
+}
+
+.round-sm {
+	border-radius: 6px;
 }
 
 .divine {

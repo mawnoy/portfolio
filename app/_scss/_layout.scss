@@ -10,3 +10,25 @@ $mobile: new-breakpoint(max-width 768px 4);
 .row {
 	@include row();
 }
+
+.col-6 {
+	@include media ($mobile) {
+		@include span-columns(4);
+	}
+	@include span-columns(6);
+}
+
+.col-6-r {
+	@include media ($mobile) {
+		@include span-columns(4);
+	}
+	@include span-columns(6);
+	@include shift(6);
+}
+
+.col-12 {
+	@include media ($mobile) {
+		@include span-columns(4);
+	}
+	@include span-columns(12);
+}
