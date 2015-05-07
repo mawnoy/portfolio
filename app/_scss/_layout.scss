@@ -1,0 +1,12 @@
+$mobile: new-breakpoint(max-width 768px 4);
+
+.container {
+	@include media($mobile) {
+		@include outer-container(92%);	
+	}
+	@include outer-container(70%);
+}
+
+.row {
+	@include row();
+}

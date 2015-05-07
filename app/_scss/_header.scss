@@ -1,106 +1,74 @@
-$white: #fff;
-$dark-grey: #333;
-
-$default-bg: #eee;
-$brand-color: #777;
-
-
-
-
 /*---------------------------------*/
-.hide-sm {
-	@media (min-width: 620px) {
-		display: block;
-	}
-	display: none;
-}
-
-.right {
-	float: right;
-}
-
-.align-center {
-	text-align: center;
-}
-
-.shadow-s {
-	box-shadow: 0 2px 2px $dark-grey;
-}
-
-// .align-verticle {
-
-// }
-
-h1,h2,h3,h4,h5,h6,p {
-	&::selection {
-		background-color: #e18728;
-		color: $white;
-	}
-}
-
 
 .top-header {
 	height: 550px;
-	background: rgba($default-bg, .8);;
-	.logo {
-		width: 40px;
-		height: 40px;
+	background:url(/img/top-bg.jpg) no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	.logo > img {
+		width: 54px;
+		height: 54px;
 		float: left;
-		padding: .3em;
+		padding: .5em;
 	}
-	&:before {
-		display: block;
-		content: "";
-		background:url(/img/top-bg.jpg) no-repeat;
-		background-size: cover;
-		position: absolute;
-		z-index: -9999;
-		width: 100%;
-		height: 550px;
-
-	}
-}
-
-.nav {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
+	// overlay bg-header.
+	// &:before {
+	// 	display: block;
+	// 	content: "";
+	// 	background: linear-gradient(to top, rgba($deep-blue, .5)1%, rgba($default-bg, .2)60%);
+	// 	position: absolute;
+	// 	z-index: 1;
+	// 	width: 100%;
+	// 	height: 550px;
+	// }
+	// can't place here because JS can't manipulate shadow DOM.
+	// &:after {
+	// 	display: block;
+	// 	content: " ";
+	// 	background:url(/img/top-bg.jpg) no-repeat;
+	// 	background-position: 0 0;
+	// 	background-size: cover;
+	// 	width: 100%;
+	// 	height: 550px;
+	// 	position: absolute;
+	// 	z-index: -2;
+	// 	top: 0;
+	// }
 }
 
 .top-nav {
-	height: 50px;
+	font-family: 'Oswald';
+	height: 3.4em;
 	background-color: $brand-color;
+	li {
+		font-size: 12px; // set font-size back
+	}
 	a {
-		color: $white;
-		padding: 16px;
+		color: rgba($white, .6);
+		padding: 17.5px;
 		text-transform: uppercase;
 		font-weight: 700;
 		&:hover {
-			background: lighten($brand-color, 20%);
+			background: lighten($brand-color, 5%);
+			color: $white;
 		}
 	}
 }
 
 .text-hero {
 	@media (min-width: 481px) {
-		font-size: 72px;
+		font-size: 2.8em;
 		margin: 1.5em auto 0;
 		width: 55%;
 	}
 	font: {
-		size: 24px;
-		family: 'impact';
+		size: 1.2em;
 	}
 	text-transform: uppercase;
 	color: $dark-grey;
 	letter-spacing: 0.05em;
-	border: 5px solid #333;
+	// border: 5px solid rgba(#333, .6);
 	width: 88%;
-	padding: .1em .1em;
 	margin: 3.5em auto 0;
 	h1 {
 		margin: auto;
@@ -109,9 +77,10 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .kicker {
-	font-weight: 600;
+	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: lighten($dark-grey, 10%);
-	line-height: 2;
+	color: rgba($dark-grey, .7);
+	line-height: 1rem;
+	margin: 0;
 }

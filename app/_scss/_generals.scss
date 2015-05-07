@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Nunito:300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400);
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Oswald';
+	color: $dark-grey;
+	&::selection {
+		background-color: #e18728;
+		color: $white;
+	}
+}
