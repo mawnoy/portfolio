@@ -1,10 +1,71 @@
-/*---------------------------------*/
+.hero-header {
+	background: $old-yellow;
+	height: 500px;
+}
+
+.top-nav {
+	background: lighten($old-yellow, 10%);
+	font-family: 'Oswald';
+	height: 3.4em;
+	// ul {
+	// 	display: block;
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	top: 55px;
+	// 	background: #fbf9f3;
+	// 	transition: all 0.5s ease-out 0s; 
+	// }
+	ul {
+		background: #fbf9f3;
+		position: absolute;
+		top: -220px;
+		width: 100%;
+		// transition: all 0.5s ease-out 0s;
+	}
+	li {
+		font-size: 12px; // set font-size back
+	}
+	a {
+		color: #555;
+		display: block;
+		text-decoration: none;
+		padding: 17.5px;
+		text-transform: uppercase;
+		font-weight: 700;
+		&:focus {
+		    outline: none;
+		}
+		&:hover {
+			background: rgba($dark-grey, .05);
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid rgba($dark-grey, .05);
+		}
+	}
+	@media (min-width: 620px) {
+		ul {
+			background: lighten($old-yellow, 10%);
+			top: -1px;
+		}
+		a {
+			color: rgba($white, .8);
+			width: auto;
+			display: inline-block;
+			&:hover {
+				background: lighten($brand-color, 5%);
+				color: $white;
+			}
+			&:focus {
+				outline: none;
+			}
+		}	
+	}
+}
 
 // toggle-btn
+
 .toggle-btn {
 	@include size(54px);
-	float: right;
-	display: block;
   	position: relative;
   	overflow: hidden;
   	margin: 0;
@@ -17,42 +78,15 @@
   	border: none;
   	cursor: pointer;
     transition: background 0.3s;
-    &:focus {
+    background-color: darken($old-yellow, 5%);
+	&:hover {
+		background-color: darken($old-yellow, 15%);
+	}
+	&:focus {
     	outline: none;
     }
-	span {
-		display: block;
-		position: absolute;
-		top: 25px;
-		left: 12px;
-		right: 12px;
-		height: 4px;
-		background: white;
-		&:before, &:after {
-			position: absolute;
-			display: block;
-			left: 0;
-			width: 100%;
-			height: 4px;
-			background-color: #fff;
-			content: "";
-		}
-		&:before {
-			top: -8px;
-		}
-		&:after {
-			top: 8px;
-		}
-	}
-}
-
-.toggle-btn-focus {
-	background-color: #ff3264;
-	&:hover {
-		background-color: darken(#ff3264, 10%);
-	}
 	&.active {
-		background-color: #cb0032;
+		background-color: darken($old-yellow, 15%);
 		span {
 			background: none;
 			&:before, &:after {
@@ -68,100 +102,60 @@
 		}
 	}
 	span {
+		position: absolute;
+		top: 25px;
+		left: 12px;
+		right: 12px;
+		height: 4px;
+		background: white;
 		transition: background 0 0.3s;
 		&:before, &:after {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background-color: #fff;
+			content: "";
 			transition-duration: 0.3s, 0.3s;
 		}
 		&:before {
+			top: -8px;
 			transition-property: top, transform;
 		}
 		&:after {
+			top: 8px;
 			transition-property: bottom, transform;
 		}
 	}
 }
 
-.top-header {
-	height: 550px;
-	background:url(/img/top-bg.jpg) no-repeat;
-	background-position: 0 0;
-	background-size: cover;
-	.logo > object {
-		width: 54px; 
-		height: 54px;
-		padding: 8px;
-		float: left;
-	}
-	// overlay bg-header.
-	// &:before {
-	// 	display: block;
-	// 	content: "";
-	// 	background: linear-gradient(to top, rgba($deep-blue, .5)1%, rgba($default-bg, .2)60%);
-	// 	position: absolute;
-	// 	z-index: 1;
-	// 	width: 100%;
-	// 	height: 550px;
-	// }
-	// can't place here because JS can't manipulate shadow DOM.
-	// &:after {
-	// 	display: block;
-	// 	content: " ";
-	// 	background:url(/img/top-bg.jpg) no-repeat;
-	// 	background-position: 0 0;
-	// 	background-size: cover;
-	// 	width: 100%;
-	// 	height: 550px;
-	// 	position: absolute;
-	// 	z-index: -2;
-	// 	top: 0;
-	// }
-}
+.menu.on {
 
-.top-nav {
-	font-family: 'Oswald';
-	height: 3.4em;
-	background-color: $brand-color;
-	li {
-		font-size: 12px; // set font-size back
-	}
-	a {
-		color: rgba($white, .6);
-		padding: 17.5px;
-		text-transform: uppercase;
-		font-weight: 700;
-		&:hover {
-			background: lighten($brand-color, 5%);
-			color: $white;
-		}
-	}
 }
 
 .text-hero {
-	@media (min-width: 481px) {
-		font-size: 2.8em;
-		margin: 1.5em auto 0;
-		width: 55%;
-	}
-	font: {
-		size: 1.2em;
-	}
+	font-size: 1.8em;
 	text-transform: uppercase;
-	color: $dark-grey;
 	letter-spacing: 0.05em;
-	// border: 5px solid rgba(#333, .6);
 	width: 88%;
-	margin: 3.5em auto 0;
+	margin: 90px auto 0;
 	h1 {
+		color: $white;
 		margin: auto;
+		background: rgba($white, .1);
 	}
-
+	@media (min-width: 620px) {
+		width: auto;
+		font-size: 2.4em;
+	}
 }
 
 .kicker {
-	font-family: 'Raleway', sans-serif;
+	font-family: Modern-sans, Jaapokki, sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	color: rgba($dark-grey, .7);
+	color: rgba($white, .8);
 	line-height: 1rem;
-	margin: 0;
+	margin-top: 2em;
 }

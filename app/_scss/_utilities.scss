@@ -1,22 +1,35 @@
-.sec-header {
+.content-block {
 	margin-top: 3em;
 	position: relative;
 }
 
-.verticle-line {
-	position: absolute;
-	width: 0;
-	height: 100%;
-	left: 50%;
-	top: 50px;
-	border: 2px solid #e1e0df;
+.v-line-block {
+	&:before {
+		position: absolute;
+		width: 0;
+		height: 100%;
+		content: "";
+		display: block;
+		left: 50%;
+		top: 50px;
+		border: 2px solid #e1e0df;
+	}
 }
+
+// .verticle-line {
+// 	position: absolute;
+// 	width: 0;
+// 	height: 100%;
+// 	left: 50%;
+// 	top: 50px;
+// 	border: 2px solid #e1e0df;
+// }
 
 .circle {
 	border-radius: 50%;
 }
 
-.header {
+.header-text {
 	display: inline-block;
 	padding: .5em 2em;
 	margin: 0;
@@ -37,10 +50,6 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
 }
 
 .hide-sm {
@@ -48,6 +57,13 @@
 		display: block;
 	}
 	display: none;
+}
+
+.hide-lg {
+	@media (min-width: 620px) {
+		display: none;
+	}
+	display: block;
 }
 
 .left {
@@ -63,7 +79,7 @@
 }
 
 .shadow-sm {
-	box-shadow: 0 1px 2px rgba($dark-grey, .5);
+	box-shadow: 0 1px 2px rgba($dark-grey, .3);
 }
 
 .shadow-lg {
@@ -81,31 +97,16 @@
 	text-align: justify;
 }
 
-.bd-sm {
-	border: 3px solid rgba($white, .1);
-}
-
-.bd-sm-pink {
-	border: 4px solid rgba($deep-pink, .7);
-}
-
-.bd-md-dash {
-	border: 4px dashed rgba(#000, .7);
+.bd-sm-white {
+	border: 1px solid rgba($white, .4);
 }
 
 .bd-sm-dark {
-	border: 1px solid rgba($dark-grey, .4);
+	border: 1px solid rgba($coal, .4);
 }
 
 .round-sm {
 	border-radius: 6px;
-}
-
-.divine {
-	height: 0;
-	width: 80%;
-	border: .05px solid rgba($dark-grey, .1);
-	margin: 3em auto;
 }
 
 .text-block {

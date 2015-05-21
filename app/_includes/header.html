@@ -1,10 +1,8 @@
-<header class="top-header align-center parallax">
+<header class="hero-header align-center">
 	
 	<div class="top-nav shadow-sm">
-		<div class="logo">{% include icons/logo.html %}</div>
-		
-		<nav>
-			<ul class="nav right hide-sm">
+		<nav class="menu">
+			<ul class="nav hide-sm">
 				<a href="#about">
 					<li>About me</li>
 				</a>
@@ -18,14 +16,14 @@
 					<li>Contact</li>
 				</a>
 			</ul>
-			<button class="toggle-btn toggle-btn-focus">
+			<button class="toggle-btn right" data-target=".menu">
 			  	<span>toggle menu</span>
 			</button>
 		</nav>
 	</div>
 
-	<div class="text-hero  align-verticle">
-		<h1>{{ page.head }}</h1>
+	<div class="text-hero align-verticle">
+		<h1 class="bd-sm-white">{{ page.head }}</h1>
 	</div>
 	<p class="kicker">{{ page.description }}</p>
 
