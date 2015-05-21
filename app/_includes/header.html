@@ -1,8 +1,8 @@
 <header class="hero-header align-center">
 	
-	<div class="top-nav shadow-sm">
-		<nav class="menu">
-			<ul class="nav hide-sm">
+	<div class="top-nav">
+		<nav id = "menu-top" class="menu shadow-sm">
+			<ul class="nav">
 				<a href="#about">
 					<li>About me</li>
 				</a>
@@ -16,13 +16,13 @@
 					<li>Contact</li>
 				</a>
 			</ul>
-			<button class="toggle-btn right" data-target=".menu">
+			<button class="toggle-btn right hide-lg" data-target="#menu-top" data-toggle="on">
 			  	<span>toggle menu</span>
 			</button>
 		</nav>
 	</div>
 
-	<div class="text-hero align-verticle">
+	<div class="text-hero">
 		<h1 class="bd-sm-white">{{ page.head }}</h1>
 	</div>
 	<p class="kicker">{{ page.description }}</p>
