@@ -1,0 +1,13 @@
+
+// star state mixin
+
+$outof: 5;
+
+@mixin star-content($num) {
+	$chr: '\2605';
+	$content: $chr;
+	@for $i from 1 to $num {
+		$content: $content + $chr;
+	}
+	content: '#{$content}';
+}

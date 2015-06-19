@@ -1,39 +1,40 @@
-.content-block {
-	margin-top: 3em;
+.bg-smoke {
+	background-color: #F5F2ED;
+}
+
+.wrap {
 	position: relative;
 }
 
-.v-line-block {
-	&:before {
-		position: absolute;
-		width: 0;
-		height: 100%;
-		content: "";
-		display: block;
-		left: 50%;
-		top: 50px;
-		border: 2px solid #e1e0df;
-	}
+.h-grey {
+	color: tint(grayscale($dark-grey), 10%);
 }
 
-// .verticle-line {
-// 	position: absolute;
-// 	width: 0;
-// 	height: 100%;
-// 	left: 50%;
-// 	top: 50px;
-// 	border: 2px solid #e1e0df;
-// }
+.card {
+	padding: 1.5em;
+	box-shadow: 0 2px 2px 0 rgba($dark-grey, .3),
+				0 4px 2px 0 rgba($dark-grey, .1);
+}
 
 .circle {
 	border-radius: 50%;
 }
 
 .header-text {
+	color: $dark-grey;
 	display: inline-block;
-	padding: .5em 2em;
-	margin: 0;
-	background-color: rgba($dark-grey, .1);
+	margin-bottom: 1em;
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";
+		height: 1px;
+		width: 44px;
+		background-color: rgba($dark-grey, .2);
+		left: 50%;
+		margin-left: -22px;
+		top: 64px;
+	}
 }
 
 .wrapper {
@@ -42,7 +43,8 @@
 
 .sec {
 	position: relative;
-	padding: 5em 0;
+	padding: 9em 0;
+	overflow: hidden;
 }
 
 .nav {
@@ -78,6 +80,10 @@
 	text-align: center;
 }
 
+.align-left {
+	text-align: left;
+}
+
 .shadow-sm {
 	box-shadow: 0 1px 2px rgba($dark-grey, .3);
 }
@@ -95,10 +101,10 @@
 }
 
 .text {
-	font-family: 'nunito';
-	letter-spacing: .02em;
-	color: rgba($dark-grey, .7);
-	text-align: justify;
+	font-family: 'nunito', sans-serif;
+	letter-spacing: .1em;
+	color: rgba($red-peach, .5);
+	text-align: left;
 }
 
 .bd-sm-white {
@@ -112,9 +118,4 @@
 .round-sm {
 	border-radius: 6px;
 }
-
-.text-block {
-	margin: 5.2em 0;
-}
-
 

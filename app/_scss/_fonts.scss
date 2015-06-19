@@ -1,14 +1,19 @@
+// @font-face {
+// 	font-family: Jaapokki;
+// 	src: url(/fonts/Regular/web/jaapokki-regular.eot);
+// 	src: url(/fonts/Regular/web/jaapokki-regular.eot?#iefix) format('embedded-opentype'),
+// 		 url(/fonts/Regular/web/jaapokki-regular.woff2) format('woff2'),
+// 		 url(/fonts/Regular/web/jaapokki-regular.woff) format('woff'),
+// 		 url(/fonts/Regular/web/jaapokki-regular.ttf) format('truetype'),
+// 		 url(/fonts/Regular/web/jaapokki-regular.svg#jaapokki-regular) format('svg');
+// }
+
 @font-face {
-	font-family: Jaapokki;
-	src: url(/fonts/Regular/web/jaapokki-regular.eot);
-	src: url(/fonts/Regular/web/jaapokki-regular.eot?#iefix) format('embedded-opentype'),
-		 url(/fonts/Regular/web/jaapokki-regular.woff2) format('woff2'),
-		 url(/fonts/Regular/web/jaapokki-regular.woff) format('woff'),
-		 url(/fonts/Regular/web/jaapokki-regular.ttf) format('truetype'),
-		 url(/fonts/Regular/web/jaapokki-regular.svg#jaapokki-regular) format('svg');
+	font-family: Modern_sans;
+	src: url(/fonts/Modern_sans/MODERNE-SANS.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: Modern-sans;
-	src: url(/fonts/Modern-sans/MODERNE-SANS.ttf) format('truetype');
+	font-family: Nexa_Bold;
+	src: url(/fonts/nexa/Nexa_Bold.otf) format('opentype');
 }

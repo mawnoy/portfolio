@@ -1,0 +1,85 @@
+<section class="sec align-center bg-smoke" id="work">
+	<div class="container">
+		<div class="wrap">
+			<h2 class="header-text">[ Work ]</h2>
+
+			<div class="thumb-container">
+				<div class="row">
+					<ul class="items-group">
+						<!-- <button class="close">close</button> -->
+						<!-- <p>{{}}</p> -->
+						{% for item in site.data.settings.gallery_item %}
+						<div class="row">
+							{% for img in item %}
+								<div class="col-3">
+									<li class="item">
+										<img src="http://placehold.it/254x168">
+									</li>
+								</div>
+							{% endfor %}
+						</div>					
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="gallery-detail-wrap">
+			<ul class="items-group">
+				<div class="row">
+					{% for item in site.data.settings.gallery_item %}
+						{% for img in item %}
+						<li class="off-gallery">
+							<button class="close" data-target="off-gallery" data-toggle="on">
+								<span></span>
+							</button>
+							<div class="big-img col-6">
+								<img class="bd-lg-white box-shadow" src="http://placehold.it/556x377">
+							</div>
+							<div class="detail col-6 align-left">
+								<h3>Item01</h3>
+								<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+							</div>
+						</li>
+						{% endfor %}
+					{% endfor %}
+<!-- 					<li class="off-gallery">
+						<button class="close" data-target="off-gallery" data-toggle="on">
+							<span></span>
+						</button>
+						<div class="big-img col-6">
+							<img class="bd-lg-white box-shadow" src="http://placehold.it/556x377">
+						</div>
+						<div class="detail col-6 align-left">
+							<h3>Item01</h3>
+							<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+						</div>
+					</li>
+					<li class="off-gallery">
+						<button class="close" data-target="off-gallery" data-toggle="on">
+							<span></span>
+						</button>
+						<div class="big-img col-6">
+							<img class="bd-lg-white box-shadow" src="http://placehold.it/556x377">
+						</div>
+						<div class="detail col-6 align-left">
+							<h3>Item01</h3>
+							<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+						</div>
+					</li>
+					<li class="off-gallery">
+						<button class="close" data-target="off-gallery" data-toggle="on">
+							<span></span>
+						</button>
+						<div class="big-img col-6">
+							<img class="bd-lg-white box-shadow" src="http://placehold.it/556x377">
+						</div>
+						<div class="detail col-6 align-left">
+							<h3>Item01</h3>
+							<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+						</div>
+					</li> -->
+				</div>
+			</ul>
+		</div>
+	</div>
+</section>
