@@ -87,13 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var a = (offGallerys[i].classList.contains('on') === true) ? offGallerys[i].classList.remove('on') : offGallerys[i].classList.add('on');
 
-        // offGallerys[i].bou
+        var topWorkSec = document.querySelector('#work');
+
+        // console.log(topWorkSec.offsetTop);
+        // window.scrollTo(0, topWorkSec.offsetTop);
 
       });
     });
 
     var closeLists = document.querySelectorAll('.close');
-    console.log(closeLists);
+    // console.log(closeLists);
 
     [].slice.call(closeLists).forEach(function(el, i) {
       el.addEventListener('click', function(e) {
@@ -199,8 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var now = Date.now();
                 var point = smooth_step(start_time, end_time, now);
                 var frameTop = Math.round(start_top + (distance * point));
-                window.scrollTo(0, frameTop);
-                // console.log(frameTop);
+                setTimeout(window.scrollTo(0, frameTop)); // set timeout to fixed WindowScroll in mobile.
 
                 // check if we're done!
                 if(now >= end_time) {
