@@ -194,8 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // This is like a think function from a game loop
             var scroll_frame = function() {
                 if(element.offsetTop !== previous_top) {
-                    reject('interrupted');
-                    return;
+                  reject('interrupted');
+                  return;
                 }
 
                 // set the scrollTop for this frame
@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // check if we're done!
                 if(now >= end_time) {
-                    resolve();
-                    return;
+                  resolve();
+                  return;
                 }
 
                 // If we were supposed to scroll but didn't, then we
@@ -215,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // interrupted.
                 if(element.scrollTop === previous_top && element.scrollTop !== frameTop) {
 
-                    resolve();
-                    return;
+                  resolve();
+                  return;
                 }
                 previous_top = element.offsetTop;
 
