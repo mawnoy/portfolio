@@ -1,5 +1,5 @@
 .zoom-icon {
-	background: url(/img/zoom_icon.png);
+	background: url(../img/zoom_icon.png);
 	background-size: cover;
 	display: block;
 	position: absolute;
@@ -88,7 +88,7 @@
 		height: 100%;
 	}
 	&.on {
-		top: 2822px;
+		top: 3622px;
 	}
 }
 
@@ -97,7 +97,7 @@
 	width: 100%;
 	height: 100%;
 	left: 0;
-	top: -2822px; //-920px to off screen
+	top: -3622px; //-920px to off screen
 	.detail {
 		@media (max-width: 640px) and (orientation: landscape) {
 			padding: 1em;

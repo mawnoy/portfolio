@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var now = Date.now();
                 var point = smooth_step(start_time, end_time, now);
                 var frameTop = Math.round(start_top + (distance * point));
-                setTimeout(window.scrollTo(0, frameTop)); // set timeout to fixed WindowScroll in mobile.
+                setTimeout(window.scrollTo(0, frameTop), 100); // set timeout to fixed WindowScroll in mobile.
 
                 // check if we're done!
                 if(now >= end_time) {
