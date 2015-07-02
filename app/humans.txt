@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Fisaul Jeaumar> -- <Developer> -- <Fisaul.jeaumar@gmail.com>
 
 # THANKS
 
-    <name>
+    <DEVTIPS>
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     Normalize.css, jQuery, Modernizr
+    Sass, Jekyll, Yeoman, Bourbon, Neat

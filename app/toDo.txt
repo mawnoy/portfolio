@@ -1,0 +1,5 @@
+# fixed css-hambergur icon incorrect result in android Nexus.
+
+# fixed smooth scroll doesn't work in some mobile browser. 
+
+# check off-gallery issue in landscape oreint in some browser.

@@ -374,8 +374,8 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
+    'autoprefixer:dist', // use before cssmin to fixed cssmin stripping vendor prefix.
     'cssmin',
-    'autoprefixer:dist',
     'uglify',
     'imagemin',
     'svgmin',

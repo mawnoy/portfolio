@@ -1,26 +1,22 @@
-<section class="sec align-center bg-smoke" id="work">
+<section class="sec align-center bg-dark" id="work">
 	<div class="container">
 		<div class="wrap">
 
 			<div class="thumb-container">
 				<div class="row">
 					<ul class="items-group">
-						<!-- <button class="close">close</button> -->
-						<!-- <p>{{}}</p> -->
 						{% for item in site.data.settings.gallery_item %}
-						<div class="row">
+						<li class="item">
 							{% for img in item %}
 								<div class="col-3">
-									<li class="item">
-										<img src="http://placehold.it/254x168">
-										<!-- http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Hover-Effects/index_3.html# -->
-										<div class="mask">
-											<span class="icon zoom-icon"></span>
-										</div>
-									</li>
-								</div>
+									<img src="img/{{img}}" alt="{{img}}">
+									<!-- http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Hover-Effects/index_3.html# -->
+									<div class="mask">
+										<span class="icon zoom-icon"></span>
+									</div>
+								</div>					
 							{% endfor %}
-						</div>					
+						</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -28,24 +24,24 @@
 		</div>
 		<div class="gallery-detail-wrap">
 			<ul class="items-group">
-				<div class="row">
 					{% for item in site.data.settings.gallery_item %}
 						{% for img in item %}
 						<li class="off-gallery">
 							<button class="close" data-target="off-gallery" data-toggle="on">
 								<span></span>
 							</button>
-							<div class="big-img col-6">
-								<img class="bd-lg-white box-shadow" src="http://placehold.it/556x377">
-							</div>
-							<div class="detail col-6 align-left">
-								<h3>Item01</h3>
-								<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+							<div class="row">
+								<div class="big-img col-6">
+									<img class="bd-lg-white box-shadow" src="img/{{img}}" alt="{{img}}">
+								</div>
+								<div class="detail col-6 align-left">
+									<h3>Item01</h3>
+									<p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+								</div>
 							</div>
 						</li>
 						{% endfor %}
 					{% endfor %}
-				</div>
 			</ul>
 		</div>
 	</div>

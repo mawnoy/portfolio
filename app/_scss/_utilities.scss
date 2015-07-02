@@ -2,6 +2,10 @@
 	background-color: #F5F2ED;
 }
 
+.bg-dark {
+	background-color: #3b3a36;
+}
+
 .wrap {
 	position: relative;
 }
@@ -11,7 +15,8 @@
 }
 
 .card {
-	padding: 1.5em;
+	// padding: 1.5em;
+	border-top: 1px solid rgba(#000, .1);
 	box-shadow: 0 2px 2px 0 rgba($dark-grey, .3),
 				0 4px 2px 0 rgba($dark-grey, .1);
 }
@@ -101,10 +106,10 @@
 }
 
 .text {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', $text-type, sans-serif;
 	letter-spacing: .1em;
 	font-weight: 300;
-	color: rgba($red-peach, .5);
+	color: $text;
 	text-align: left;
 }
 

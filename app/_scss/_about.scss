@@ -1,9 +1,11 @@
+
+
 .rating {
 	@media (min-width: 620px) {
 		font-size: 2.2em;
 	}
 	font-size: 1.5em;
-	color: rgb(249, 182, 145);
+	color: #e36723;
 	display: block;
 	position: relative;
 	&:before {
@@ -53,7 +55,6 @@
 		height: 95%;
 		content: "";
 		display: block;
-		top: 92px;
 		border: 2px solid #e1e0df;
 		z-index: -999;
 	}
@@ -67,31 +68,14 @@
 		margin-top: -10px;
 		margin-left: -44px;
 		left: 0;
-		background: #a2a2a2;
+		background: #787878;
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
-		// &:before {
-		// 	content: "";
-		// 	position: absolute;
-		// 	display: block;
-		// 	background-color: darken($deep-pink, 40%);
-		// 	width: 32px;
-		// 	height: 32px;
-		// 	border-radius: 50%; 
-		// 	z-index: -999;
-		// 	margin-top: -16px;
-		// 	margin-left: -16px;
-		// 	left: 50%;
-		// 	top: 50%;
-		// }
 	}
 
 	.time-block {
 		@media (min-width: 1280px) {
-			&:nth-child(2) {
-				margin-top: 6em;
-			}
 			&:nth-child(2n) {
 				float: right;
 			}
@@ -123,7 +107,9 @@
 			float: left;
 		}
 		position: relative;
-		margin-top: 2em;
+		&:not(:first-child) {
+			margin-top: 2em;	
+		}
 		&:nth-child(even) {
 			.text-content {
 				&.bounce-in {
@@ -136,20 +122,27 @@
 
 	.text {
 		@media (min-width: 1280px) {
-			font-size: 1em;
+			font-size: .8em;
 		}
 		font-size: 0.85rem;
 		padding: 2.5em;
 		line-height: 1.8em;
 		margin: 0;
+		visibility: hidden;
+		&.fade-in {
+			visibility: visible;
+			animation: fade-in 1s;
+		}
+
 	}
 
 	h3 {
 		font-family: 'Roboto', sans-serif;
 		margin: 0;
 		padding: 1.2em;
-		color: #F8F8F8;
-		background-color: tint($red-peach, 10%);
+		color: #fff;
+		background-color: #b3c2bf;
+		border-top: 1px solid #a0adaa;
 	}
 
 	ul {
@@ -168,8 +161,11 @@
 	}
 
 	.text-content {
+		border-top: 1px solid rgba(#000, .1);
+		box-shadow: 0 2px 2px 0 rgba($dark-grey, .3),
+					0 4px 2px 0 rgba($dark-grey, .1);
 		background: #f9f7ee;
-		border: 1px solid #ddd;
+		// border: 1px solid #ddd;
 		position: relative;
 		// triangle shape
 		&:before,
@@ -181,7 +177,7 @@
 			height: 0;
 			width: 0;
 			position: absolute;
-			pointer-events: none;
+			// pointer-events: none;
 		}
 		&:after {
 			border-color: rgba(136, 183, 213, 0);
@@ -198,10 +194,27 @@
 	}
 }
 
+@keyframes fade-in {
+	0% {
+    	transform: scale(0);
+		opacity: 0;
+	}
+
+	75% {
+		transform: scale(1.02);
+		opacity: .8;
+	}
+
+	100% {
+    	transform: scale(1);
+		opacity: 1;
+	}
+}
+
 @keyframes cd-bounce-1 {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(.5);
   }
  
   60% {

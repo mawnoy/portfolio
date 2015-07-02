@@ -124,7 +124,7 @@ textarea {
 
 .hidden {
     display: none !important;
-    visibility: hidden;
+    visibility: visible;
 }
 
 /*

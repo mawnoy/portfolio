@@ -30,6 +30,24 @@
 document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
+  // remove useless witespace node in DOM. http://reference.sitepoint.com/javascript/Node/normalize
+  function cleanWhitespace(node) {
+    for (var i=0; i<node.childNodes.length; i++)
+    {
+      var child = node.childNodes[i];
+      if(child.nodeType === 3 && !/\S/.test(child.nodeValue))
+      {
+        node.removeChild(child);
+        i--;
+      }
+      if(child.nodeType === 1)
+      {
+        cleanWhitespace(child);
+      }
+    }
+    return node;
+  }
+
   // Function Toggle botton
   // Ref - http://callmenick.com/post/animating-css-only-hamburger-menu-icons
   ((function() {
@@ -110,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   })());
 
-  // Function animation bounce-in verticle time-line
+  // Function toggle animation class when scroll
   // http://codyhouse.co/demo/vertical-timeline/index.html#0
   ((function() {
 
@@ -123,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var classNode = [];
 
       for(var i = 0; i < parentNode.childNodes.length; i++) {
+        // console.log(parentNode.childNodes[i]);
         if(classNameArray.indexOf(parentNode.childNodes[i].className) >= 0) {
           classNode.push(parentNode.childNodes[i]);
         }
@@ -144,10 +163,17 @@ document.addEventListener('DOMContentLoaded', function() {
           findClass(el, ['circle-point is-hidden', 'text-content is-hidden']).forEach(function(elemClass) {
             elemClass.classList.remove('is-hidden');
             elemClass.classList.add('bounce-in');
+            
+            cleanWhitespace(elemClass);
+            var a = (elemClass.childNodes[1] !== undefined) ? elemClass.childNodes[1].classList.add('fade-in') : false;
+            
           });
         }
       });
     };
+
+
+
 
   })());
 

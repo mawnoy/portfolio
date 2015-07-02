@@ -16,6 +16,9 @@ $mobile: new-breakpoint(max-width 768px 4);
 	@include media ($mobile) {
 		@include span-columns(4);
 	}
+	position: relative;
+	margin: 0;
+	width: 25%;
 }
 
 .col-5 {
