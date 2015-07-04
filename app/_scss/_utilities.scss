@@ -1,3 +1,8 @@
+.block {
+	display: block;
+	margin-bottom: .3em;
+}
+
 .bg-smoke {
 	background-color: #F5F2ED;
 }
@@ -46,19 +51,6 @@
 	height: 100%;
 }
 
-.sec {
-	position: relative;
-	padding: 9em 0;
-	overflow: hidden;
-}
-
-.nav {
-	font-size: 0; // fixed white-space of child inline-block
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 .hide-sm {
 	@media (min-width: 620px) {
 		display: block;
@@ -80,6 +72,7 @@
 .right {
 	float: right;
 }
+
 
 .align-center {
 	text-align: center;
@@ -103,14 +96,6 @@
 
 .text-shadow-s {
 	text-shadow: 0 1px 0 $dark-grey;
-}
-
-.text {
-	font-family: 'Roboto', $text-type, sans-serif;
-	letter-spacing: .1em;
-	font-weight: 300;
-	color: $text;
-	text-align: left;
 }
 
 .bd-sm-white {

@@ -6,9 +6,9 @@
 				<div class="row">
 					<ul class="items-group">
 						{% for item in site.data.settings.gallery_item %}
-						<li class="item">
+						<li>
 							{% for img in item %}
-								<div class="col-3">
+								<div class="col-3 item">
 									<img src="img/{{img}}" alt="{{img}}">
 									<!-- http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Hover-Effects/index_3.html# -->
 									<div class="mask">

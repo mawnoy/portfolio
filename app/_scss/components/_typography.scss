@@ -1,0 +1,52 @@
+/* ----------------------------------------------------------------- */
+//                                        
+// General Typography style                                            
+// 
+/* ------------------------------------------------------------------*/
+
+html, body {
+	font-size: 16px;
+	color: $text;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Oswald', sans-serif;
+	color: $dark-grey;
+	&::selection {
+		background-color: #e18728;
+		color: $white;
+	}
+}
+
+strong {
+	color: #77b4b0;
+}
+
+//-----------------------------------------------------------------------
+
+/*--------------------*/
+//  default text style
+/*--------------------*/
+
+.text {
+	font-family: 'Roboto', $text-type, sans-serif;
+	letter-spacing: .15em;
+	font-weight: 300;
+	text-align: left;
+}
+
+
+//  sub-main text
+
+.text-main {
+	font-size: .9rem;
+	line-height: 1.4;
+	letter-spacing: .1em;
+	@media (min-width: 620px) {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+}
+
+//-----------------------------------------------------------------------

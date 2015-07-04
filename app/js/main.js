@@ -48,8 +48,37 @@ document.addEventListener('DOMContentLoaded', function() {
     return node;
   }
 
-  // Function Toggle botton
+
+
+  // remove hover state for touch devices.
+  // http://stackoverflow.com/questions/23885255/how-to-remove-ignore-hover-css-style-on-touch-devices
+  // http://mir.aculo.us/2013/01/26/why-and-how-to-not-use-hover-styles-on-touch-devices/
+  // var touch = window.ontouchstart ||
+  //             navigator.MaxTouchPoints > 0 ||
+  //             navigator.msMaxTouchPoints > 0;
+
+  // if (touch) { // remove all :hover stylesheets
+  //     try { // prevent crash on browsers not supporting DOM styleSheets properly
+  //         for (var si in document.styleSheets) {
+  //             var styleSheet = document.styleSheets[si];
+  //             if (!styleSheet.rules) continue;
+
+  //             for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+  //                 if (!styleSheet.rules[ri].selectorText) continue;
+
+  //                 if (styleSheet.rules[ri].selectorText.match(':hover')) {
+  //                     styleSheet.deleteRule(ri);
+  //                 }
+  //             }
+  //         }
+  //     } catch (ex) {}
+  // }
+
+
+
+  // Function Toggle botton add is-active class.
   // Ref - http://callmenick.com/post/animating-css-only-hamburger-menu-icons
+  // http://callmenick.com/_development/css-hamburger-menu-icons/
   ((function() {
 
     function toggleHandler(toggle, dataTarget, dataToggle) {
@@ -58,12 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         var target = document.querySelector(dataTarget);
 
-        var a = (this.classList.contains('active') === true) ? this.classList.remove('active') : this.classList.add('active');
+        var a = (this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
         var b = (target.classList.contains(dataToggle) === true) ? target.classList.remove(dataToggle) : target.classList.add(dataToggle);
       });
     }
 
-    var toggles = document.querySelectorAll('.toggle-btn');
+
+    var toggles = document.querySelectorAll('.btn-hamburger');
 
     for (var i = toggles.length - 1; i >= 0; i--) {
       var toggle     = toggles[i];
@@ -85,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var menu = document.querySelector('#menu-top');
 
         var a = (menu.classList.contains('on') === true) ? menu.classList.remove('on') : false;
-        var b = (topBtn.classList.contains('active') === true) ? topBtn.classList.remove('active') : false;
+        var b = (topBtn.classList.contains('is-active') === true) ? topBtn.classList.remove('is-active') : false;
 
       });
     });

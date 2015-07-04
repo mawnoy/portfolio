@@ -40,12 +40,14 @@ $mobile: new-breakpoint(max-width 768px 4);
 	}
 }
 
-.col-6-r {
+.col-8-middle {
+	@include span-columns(8);
+	@include shift(2);
+
 	@include media ($mobile) {
 		@include span-columns(4);
+		@include shift(0);
 	}
-	@include span-columns(6);
-	@include shift(6);
 }
 
 .col-12 {
@@ -53,4 +55,13 @@ $mobile: new-breakpoint(max-width 768px 4);
 		@include span-columns(4);
 	}
 	@include span-columns(12);
+}
+
+.sec {
+	position: relative;
+	padding: 4.5em 0;
+	overflow: hidden;
+	@media (min-width: 620px) {
+		padding: 9em 0;
+	}
 }

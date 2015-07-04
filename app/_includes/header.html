@@ -1,28 +1,29 @@
 <header class="hero-header align-center">
 	
-	<div class="top-nav">
-		<nav class="menu shadow-sm" id ="menu-top">
-			<ul class="nav">
-				<li>
-					<a href="#about">About me</a>
-				</li>
-				<li>
-					<a href="#work">Work</a>
-				</li>
-				<li>
-					<a href="#client">Client</a>
-				</li>
-				<li>
-					<a href="#contact">Contact</a>
-				</li>
-			</ul>
-			<button class="toggle-btn right hide-lg" id="top-btn-toggle" data-target="#menu-top" data-toggle="on">
-				<span></span>
-			  	<span></span>
-			  	<span></span>
-			</button>
-		</nav>
-	</div>
+
+	<nav class="menu shadow-sm" id ="menu-top">
+			
+		<ul class="nav nav-top">
+			<li>
+				<a href="#work"><i class="fa fa-photo fa-2x"></i></a>
+			</li>
+			<li>
+				<a href="#about"><i class="fa fa-user fa-2x"></i></a>
+			</li>
+			<li>
+				<a href="#skill"><i class="fa fa-connectdevelop fa-2x"></i></a>
+			</li>
+			<li>
+				<a href="#contact"><i class="fa fa-envelope fa-2x"></i></a>
+			</li>
+		</ul>
+
+		<!-- Hamburger btn http://callmenick.com/post/animating-css-only-hamburger-menu-icons-->
+		<button class="btn btn-hamburger hide-lg" id="top-btn-toggle" data-target="#menu-top" data-toggle="on">
+			<span>toggle menu</span>
+		</button>
+	</nav>
+
 
 	<div class="text-hero">
 		<h1>{{ page.head }}</h1>

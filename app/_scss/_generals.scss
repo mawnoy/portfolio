@@ -8,14 +8,9 @@ body {
 	font-family: sans-serif;
 	min-height: 100%;
 	position: relative;
-	background-color: $default-bg;
+	background-color: #F2F2F2;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Oswald', sans-serif;
-	color: $dark-grey;
-	&::selection {
-		background-color: #e18728;
-		color: $white;
-	}
+.touch .mask:hover {
+    display: none;
 }

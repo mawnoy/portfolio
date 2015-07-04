@@ -1,0 +1,98 @@
+/* ----------------------------------------------------------------- */
+// reset style default button.                                       
+// initial custom button                                             
+// http://callmenick.com/post/animating-css-only-hamburger-menu-icons
+/* ------------------------------------------------------------------*/
+
+.btn {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none; 			// reset default ui default button.
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background $hamburger-transition-duration; // make btn animation.
+
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+/*--------------------*/
+//  hamburger button
+/*--------------------*/
+
+.btn-hamburger {
+	
+
+	// default state.
+	
+	@include size($hamburger-size);
+	background-color: $hamburger-color;
+	float: $hamburger-pos;
+
+	span {
+		transition: background 0s $hamburger-transition-duration;
+		display: block;
+		position: absolute;
+		top: ($hamburger-size / 2) - ($hamburger-thickness / 2);
+		left: $hamburger-pad;
+		right: $hamburger-pad;
+		height: $hamburger-thickness;
+		background-color: white;
+		&:before,
+		&:after {
+			transition-duration: $hamburger-transition-duration, $hamburger-transition-duration;
+			transition-delay: $hamburger-transition-duration, 0s;
+			position: absolute;
+			display: block;
+			content: '';
+			left: 0;
+			width: 100%;
+			height: $hamburger-thickness;
+			background-color: white;
+		}
+		&:before {
+			transition-property: top, transform;
+			top: -$hamburger-thickness - $hamburger-bar-space;
+		}
+		&:after {
+			transition-property: bottom, transform;
+			bottom: -$hamburger-thickness - $hamburger-bar-space;
+		}
+	}
+
+
+
+	// active state.
+	
+	&.is-active {
+		background-color: darken($hamburger-color, 20%);
+
+		span {
+			background: none;
+			&:before,
+			&:after {
+				transition-delay: 0s, $hamburger-transition-duration;
+			}
+			&:before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+			&:after {
+				bottom: 0;
+				transform: rotate(-45deg);
+			}
+
+
+		}
+	}
+}
